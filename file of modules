@@ -1,0 +1,196 @@
+# Functions Module
+
+def get_input():
+    sid = input("Enter ID: ")
+    name = input("Enter Name: ")
+    total = int(input("Total Questions: "))
+    correct = int(input("Correct Answers: "))
+    return sid, name, total, correct
+
+def calculate(total, correct):
+    marks = correct
+    percentage = (correct / total) * 100
+    return marks, percentage
+
+def display(sid, name, marks, percentage):
+    print("\n--- RESULT ---")
+    print("ID:", sid)
+    print("Name:", name)
+    print("Marks:", marks)
+    print("Percentage:", percentage)
+
+# Main
+sid, name, total, correct = get_input()
+marks, percentage = calculate(total, correct)
+display(sid, name, marks, percentage)
+
+
+# Dictionaries Module
+
+students = []
+
+n = int(input("Enter number of students: "))
+
+for i in range(n):
+    student = {}
+    student["id"] = input("Enter ID: ")
+    student["name"] = input("Enter Name: ")
+    student["marks"] = int(input("Enter Marks: "))
+    
+    students.append(student)
+
+# Display
+print("\n--- STUDENT DATA ---")
+for s in students:
+    print(s)
+
+
+# NumPy Module
+
+import numpy as np
+
+n = int(input("Enter number of students: "))
+
+total = []
+correct = []
+
+for i in range(n):
+    t = int(input("Total Questions: "))
+    c = int(input("Correct Answers: "))
+    
+    total.append(t)
+    correct.append(c)
+
+# Convert to array
+total = np.array(total)
+correct = np.array(correct)
+
+# Calculation
+percentage = (correct / total) * 100
+
+print("\nPercentages:", percentage)
+print("Average:", np.mean(percentage))
+
+
+# Pandas Module
+
+import pandas as pd
+
+data = []
+
+n = int(input("Enter number of students: "))
+
+for i in range(n):
+    sid = input("Enter ID: ")
+    name = input("Enter Name: ")
+    marks = int(input("Enter Marks: "))
+    
+    data.append([sid, name, marks])
+
+# DataFrame
+df = pd.DataFrame(data, columns=["ID", "Name", "Marks"])
+
+# Output
+print("\n--- DATA TABLE ---")
+print(df)
+
+print("\nAverage Marks:", df["Marks"].mean())
+
+# Functions Module
+
+def get_input():
+    sid = input("Enter ID: ")
+    name = input("Enter Name: ")
+    total = int(input("Total Questions: "))
+    correct = int(input("Correct Answers: "))
+    return sid, name, total, correct
+
+def calculate(total, correct):
+    marks = correct
+    percentage = (correct / total) * 100
+    return marks, percentage
+
+def display(sid, name, marks, percentage):
+    print("\n--- RESULT ---")
+    print("ID:", sid)
+    print("Name:", name)
+    print("Marks:", marks)
+    print("Percentage:", percentage)
+
+# Main
+sid, name, total, correct = get_input()
+marks, percentage = calculate(total, correct)
+display(sid, name, marks, percentage)
+
+
+# Dictionaries Module
+
+students = []
+
+n = int(input("Enter number of students: "))
+
+for i in range(n):
+    student = {}
+    student["id"] = input("Enter ID: ")
+    student["name"] = input("Enter Name: ")
+    student["marks"] = int(input("Enter Marks: "))
+    
+    students.append(student)
+
+# Display
+print("\n--- STUDENT DATA ---")
+for s in students:
+    print(s)
+
+
+# NumPy Module
+
+import numpy as np
+
+n = int(input("Enter number of students: "))
+
+total = []
+correct = []
+
+for i in range(n):
+    t = int(input("Total Questions: "))
+    c = int(input("Correct Answers: "))
+    
+    total.append(t)
+    correct.append(c)
+
+# Convert to array
+total = np.array(total)
+correct = np.array(correct)
+
+# Calculation
+percentage = (correct / total) * 100
+
+print("\nPercentages:", percentage)
+print("Average:", np.mean(percentage))
+
+
+# Pandas Module
+
+import pandas as pd
+
+data = []
+
+n = int(input("Enter number of students: "))
+
+for i in range(n):
+    sid = input("Enter ID: ")
+    name = input("Enter Name: ")
+    marks = int(input("Enter Marks: "))
+    
+    data.append([sid, name, marks])
+
+# DataFrame
+df = pd.DataFrame(data, columns=["ID", "Name", "Marks"])
+
+# Output
+print("\n--- DATA TABLE ---")
+print(df)
+
+print("\nAverage Marks:", df["Marks"].mean())
+
